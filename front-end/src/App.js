@@ -6,6 +6,7 @@ import Contact from './view/contact';
 import Shop from './view/shop';
 import Gallery from './view/gallery';
 import Cart from './view/cart';
+import ProductCategories from './components/ProductCategoies';
 
 function App() {
     
@@ -20,6 +21,7 @@ function App() {
             <Route path='/cart' component={Cart} />
         </Switch>        
       </header>
+      <ProductCategories />
     </div>
   );
 }

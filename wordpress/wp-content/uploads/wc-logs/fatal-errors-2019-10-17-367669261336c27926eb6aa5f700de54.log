@@ -1,0 +1,9 @@
+2019-10-17T11:54:29+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_subtotal() on null in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php:77
+Stack trace:
+#0 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php(120): storefront_cart_link()
+#1 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-includes/class-wp-hook.php(286): storefront_header_cart('')
+#2 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#4 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/header.php(46): do_action('storefront_head...')
+#5 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-includes/template.php(722): require_o in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/inc/woocommerce/storefront-woocommerce-template-functions.php on line 77
+
