@@ -41,7 +41,7 @@ const ProductCategories = () => {
         const [categories, setCategories] = useState([]);
 
         useEffect(() => {
-            api.get('categories', {
+            api.get('products/categories', {
                     per_page: 20, // 20 products per page
                 })
                 .then((response) => {
@@ -60,7 +60,14 @@ const ProductCategories = () => {
 
         console.log(categories);
     return(
-        <div></div>
+        <div>
+            {categories.map(category => (
+                    <p  {...category} 
+                    key = {category.id}
+                    categoryName = {category.name}
+                     >{category.name}</p>
+                ))}
+        </div>
     );
 }
 
