@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import WooCommerceRestApi from '@woocommerce/woocommerce-rest-api';
+import { P } from '../typo';
 
 const api = new WooCommerceRestApi({
     url: 'https://paintedpirate.test',
@@ -41,7 +42,7 @@ const ProductCategories = () => {
         const [categories, setCategories] = useState([]);
 
         useEffect(() => {
-            api.get('categories', {
+            api.get('products/categories', {
                     per_page: 20, // 20 products per page
                 })
                 .then((response) => {
@@ -60,7 +61,15 @@ const ProductCategories = () => {
 
         console.log(categories);
     return(
-        <div></div>
+        <div>
+            {categories.map(category => (
+                    <P  {...category} 
+                        key = {category.id}
+                        text = {category.name}
+                    />
+                    // ,console.log(category.display)
+                ))}
+        </div>
     );
 }
 
