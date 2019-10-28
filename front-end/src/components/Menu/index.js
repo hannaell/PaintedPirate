@@ -10,10 +10,10 @@ const MenuStyled = styled.div`
     display: flex;
     justify-content: space-between;
 `
-const LogoStyled = styled.img`
-    width: 4vw;
-    padding: 2vh;
-`
+// const LogoStyled = styled.img`
+//     width: 4vw;
+//     padding: 2vh;
+// `
 
 const DivStyled = styled.div`
     height: 100%;
@@ -36,12 +36,13 @@ const StyledLink = styled(Link)`
 const Menu = () => {
     return(
         <MenuStyled>
-            <LogoStyled src='' alt='Logo'/>
+            {/* <LogoStyled src='' alt='Logo'/> */}
             <DivStyled>
-                <StyledLink to='/Contact'><P text='CONTACT' /></StyledLink>
                 <StyledLink to='/Gallery'><P text='GALLERY'/></StyledLink>
+                <StyledLink to='/Contact'><P text='CONTACT' /></StyledLink>
                 <StyledLink to='/Shop'><P text='SHOP'/></StyledLink>
             </DivStyled>
+            <P text='BAG'/>
         </MenuStyled>
     );
 }
