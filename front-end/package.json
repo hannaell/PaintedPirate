@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/runtime": "^7.6.3",
     "@woocommerce/woocommerce-rest-api": "^1.0.1",
+    "google-map-react": "^1.1.5",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-router-dom": "^5.1.2",
