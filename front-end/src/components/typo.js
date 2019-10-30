@@ -17,6 +17,8 @@ const PStyled = styled.p`
     font-size: ${props => props.fontsize || '16px'};
     font-weight: ${props => props.fontweight || 'normal'};
     color: ${props => props.color || '#1A1A1A'};
+    margin: ${props => props.margin || '0px'};
+    padding: ${props => props.padding || '1px'};
 `
 
 export const H1 = (props) => {
