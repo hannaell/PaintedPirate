@@ -9,6 +9,9 @@ const MenuStyled = styled.div`
     background-color: aqua;
     display: flex;
     justify-content: space-between;
+    top: 0;
+    left: 0;
+    position: absolute;
 `
 // const LogoStyled = styled.img`
 //     width: 4vw;

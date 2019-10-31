@@ -2,15 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 
 const H1Styled = styled.h1`
+    font-size: ${props => props.fontsize || '32px'};
+    font-weight: ${props => props.fontweight || 'normal'};
     color: ${props => props.color || '#1A1A1A'};
+    margin: ${props => props.margin || '0px'};
+    padding: ${props => props.padding || '1px'};
 `
 
 const H2Styled = styled.h2`
+    font-size: ${props => props.fontsize || '24px'};
+    font-weight: ${props => props.fontweight || 'normal'};
     color: ${props => props.color || '#1A1A1A'};
+    margin: ${props => props.margin || '0px'};
+    padding: ${props => props.padding || '1px'};
 `
 
 const H3Styled = styled.h3`
+    font-size: ${props => props.fontsize || '18px'};
+    font-weight: ${props => props.fontweight || 'normal'};
     color: ${props => props.color || '#1A1A1A'};
+    margin: ${props => props.margin || '0px'};
+    padding: ${props => props.padding || '1px'};
 `
 
 const PStyled = styled.p`
