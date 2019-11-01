@@ -1,6 +1,70 @@
 import React from 'react';
 import styled from 'styled-components';
-import { P } from '../typo';
+import { P, H2, H3 } from '../typo';
+
+const FormStyled = styled.form`
+    height: 78vh;
+    width: 74vw;
+    padding: 13vw;
+`;
+
+const InputStyled = styled.div`
+    height: 60vh;
+    width: 49vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+`;
+
+const TextInputStyled = styled.input`
+    height: 5vh;
+    width: 24vw;
+    font-size: 16px;
+    background-color: #F7F7F7;
+    border: 2px solid #1A1A1A;
+    /* ::placeholder {
+        font-size: 16px;
+    } */
+`;
+
+const TextAreaStyled = styled.textarea`
+    height: 32vh;
+    width: 49vw;
+    font-size: 16px;
+    background-color: #F7F7F7;
+    border: 2px solid #1A1A1A;
+    /* ::placeholder {
+        font-size: 16px;
+    } */
+`;
+
+// const LabelFileStyled = styled.label`
+//     /* height: 5.5vh;
+//     width: 37vw; */
+//    :after{
+//          background-color: #1A1A1A;
+//     }
+//     :before{
+
+//     }
+// `;
+
+// const InputFileStyled = styled.input`
+//     opacity: 0;
+//     height: 5.5vh;
+//     :after{
+//          background-color: #1A1A1A;
+//     }
+//     :before{
+//         background-color: #1A1A1A;
+//     }
+// `;
+
+const ButtonStyled = styled.button`
+    height: 5.5vh;
+    width: 37vw;
+    background-color: #1A1A1A;
+`;
 
 
 class ContactForm extends React.Component {
@@ -15,21 +79,26 @@ class ContactForm extends React.Component {
   render() {
     const { status } = this.state;
     return (
-      <form
+      < FormStyled
         onSubmit={this.submitForm}
         action = 'https://formspree.io/xknwkzeb'
         method='POST'
+        enctype='multipart/form-data'
       >
+        <InputStyled>
+            <label><H2 text='Name' fontWeight='bold' paddingBottom='4px' paddingTop='18px'/></label>
+            <TextInputStyled type='text' name='name' placeholder='Camille Jadermark' />
+            <label><H2 text='E-mail' fontWeight='bold' paddingBottom='4px' paddingTop='18px' /></label>
+            <TextInputStyled type='email' name='email' placeholder='camille-justine@live.se' />
+            <label><H2 text='Message' fontWeight='bold' paddingBottom='4px' paddingTop='18px' /></label>
+            <TextAreaStyled name='message' placeholder='Hello, ny name is Camille.'></TextAreaStyled>
+        </InputStyled>
         
-        <label>Name:</label>
-        <input type='text' name='name' />
-        <label>Email:</label>
-        <input type='email' name='email' />
-        <label>Message:</label>
-        <input type='text' name='message' />
-        {status === 'SUCCESS' ? <P text='Thanks!'/> : <button>Submit</button>}
+            <input type='file' name='attachment' accept='image/png, image/jpeg' />
+        
+        {status === 'SUCCESS' ? <P text='Thanks!' /> : <ButtonStyled><H3 text='SEND' color='#F7F7F7'/></ButtonStyled>}
         {status === 'ERROR' && <P text='Ooops! There was an error.' />}
-      </form>
+      </FormStyled>
     );
   }
 
