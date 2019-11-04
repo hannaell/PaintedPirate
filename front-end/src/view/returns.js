@@ -19,7 +19,7 @@ const Returns = () => {
             <H1Styled>
                 <H1 text='For returns or claims*, please fill in the form and' fontWeight='bold'/>
                 <H1 text='upload a picture if needed.' fontWeight='bold'/>
-                <H3 text='*Please note that it´s a return fee.' fontWeight='bold' marginTop='1vh' />
+                <H3 text='*Please note that it´s a return fee.' fontSize='20px' fontWeight='bold' marginTop='1vh' />
             </H1Styled>
             <ReturnForm />
         </Layout>
