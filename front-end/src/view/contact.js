@@ -6,18 +6,20 @@ import ContactForm from '../components/ContactForm';
 import Map from '../components/Map';
 
 const H1Styled = styled.div`
-    width: 50vw;
+    width: 60vw;
+    padding-left: 13vw;
+    padding-top: 14vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: flex-start;
 `;
 
 const Contact = () => {
     return (
         <Layout>
             <H1Styled>
-                <H1 text='For questions or time booking, please fill in' fontWeight='bold'/>
-                <H1 text='the form and upload a picture for inspiration.' fontWeight='bold'/>
+                <H1 text='For questions and booking, please fill in the form and' fontWeight='bold'/>
+                <H1 text='upload a picture for inspiration.' fontWeight='bold'/>
             </H1Styled>
             <ContactForm />
             <Map />
