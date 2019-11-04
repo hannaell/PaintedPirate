@@ -1,51 +1,55 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { P } from '../typo';
+import { H3 } from '../typo';
 
 const MenuStyled = styled.div`
-    height: 8vh;
-    width: 100vw;
-    background-color: aqua;
+    height: 10vh;
+    width: 100vw;    
     display: flex;
     justify-content: space-between;
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
 `
-// const LogoStyled = styled.img`
-//     width: 4vw;
-//     padding: 2vh;
-// `
 
 const DivStyled = styled.div`
     height: 100%;
-    width: 30vw;
+    width: 25vw;
+    margin-left: 13vw;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
 `
 
 const StyledLink = styled(Link)`
-    padding: 1vh;
     text-decoration: none;
-    /* color: white; */
     &:focus, &:hover, &:visited, &:link, &:active {
         text-decoration: none;
     }
 `;
 
+const CartStyled = styled.div`
+    height: 100%;
+    width: 5vw;
+    padding-right: 13vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
 const Menu = () => {
     return(
         <MenuStyled>
-            {/* <LogoStyled src='' alt='Logo'/> */}
             <DivStyled>
-                <StyledLink to='/Gallery'><P text='GALLERY'/></StyledLink>
-                <StyledLink to='/Contact'><P text='CONTACT' /></StyledLink>
-                <StyledLink to='/Shop'><P text='SHOP'/></StyledLink>
+                <StyledLink to='/Gallery'><H3 text='GALLERY' fontSize='20px' /></StyledLink>
+                <StyledLink to='/Contact'><H3 text='CONTACT' fontSize='20px' /></StyledLink>
+                <StyledLink to='/Shop'><H3 text='SHOP' fontSize='20px' /></StyledLink>
             </DivStyled>
-            <P text='BAG'/>
+            <CartStyled>
+                <H3 text='CART' fontSize='20px' />
+            </CartStyled>
         </MenuStyled>
     );
 }

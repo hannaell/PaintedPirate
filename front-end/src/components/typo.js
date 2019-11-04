@@ -32,6 +32,7 @@ const H3Styled = styled.h3`
     padding-bottom: ${props => props.paddingBottom || '0px'};
     padding-left: ${props => props.paddingLeft || '0px'};
     padding-right: ${props => props.paddingRight || '0px'};
+    z-index: ${props => props.zIndex || '0'};
 `
 
 const PStyled = styled.p`
