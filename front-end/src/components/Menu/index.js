@@ -48,7 +48,7 @@ const Menu = () => {
                 <StyledLink to='/Shop'><H3 text='SHOP' fontSize='20px' /></StyledLink>
             </DivStyled>
             <CartStyled>
-                <H3 text='CART' fontSize='20px' />
+                <StyledLink to='/Cart'><H3 text='CART' fontSize='20px' /></StyledLink>
             </CartStyled>
         </MenuStyled>
     );
