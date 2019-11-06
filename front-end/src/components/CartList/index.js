@@ -49,7 +49,7 @@ const ScrollDiv = styled.div`
 `;
 
 const TotalDivStyled = styled.div`
-    height: 78.2vh;
+    height: 76.2vh;
     width: 100%;
 `;
 
@@ -100,10 +100,10 @@ const CartList = () => {
                         <P text='DELIVERY' fontWeight='500' marginLeft='1.3vw' />
                         <P text='79 SEK' fontWeight='500' marginRight='1.3vw' />
                     </InsideDiv>
-                    <P text='DO YOU HAVE ANY DISCOUNT CODE? ' fontWeight='500'/>
+                    <P text='DO YOU HAVE ANY DISCOUNT CODE? ' fontWeight='500' marginTop='2vh'/>
                     <InsideDiv>
-                        <P text='HANNMILLE100' fontWeight='500' marginLeft='1.3vw' />
-                        <P text='-100 SEK' fontWeight='500' marginRight='1.3vw' />
+                        <P text='HANNMILLE100' fontWeight='500' marginTop='-3vh' marginLeft='1.3vw' />
+                        <P text='-100 SEK' fontWeight='500' marginTop='-3vh' marginRight='1.3vw' />
                     </InsideDiv>
                 </TotalDivStyled>
                 <BottomStyled>
