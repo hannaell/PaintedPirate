@@ -10,7 +10,7 @@ const CardStyled = styled.div`
 const ProductCard = (props) => {
     return(
         <CardStyled>
-            <img src={props.productImg} alt='product image'></img>
+            <img src={props.productImg} alt='product img'></img>
             <h3>{props.productName}</h3>
             <p>{props.productPrice}</p>
         </CardStyled>
