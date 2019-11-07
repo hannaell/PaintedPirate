@@ -1,9 +1,15 @@
 import React from 'react';
-import Layout from '../components/Layout';
 import styled from 'styled-components';
 import { H1 } from '../components/typo';
 import ContactForm from '../components/ContactForm';
 import Map from '../components/Map';
+import Menu from '../components/Menu';
+import Footer from '../components/Footer';
+
+const ColorDiv = styled.div`
+    width: 100vw;
+    background-color: #F7F7F7;
+`;
 
 const H1Styled = styled.div`
     width: 60vw;
@@ -16,14 +22,16 @@ const H1Styled = styled.div`
 
 const Contact = () => {
     return (
-        <Layout>
+        <ColorDiv>            
+            <Menu />
             <H1Styled>
                 <H1 text='For questions and booking, please fill in the form and' fontWeight='bold'/>
                 <H1 text='upload a picture for inspiration.' fontWeight='bold'/>
             </H1Styled>
             <ContactForm />
-            <Map />
-        </Layout>
+            <Map />   
+            <Footer />
+        </ColorDiv>
     );
 }
 
