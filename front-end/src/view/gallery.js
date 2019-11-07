@@ -3,15 +3,21 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { H3 } from '../components/typo';
 import Footer from '../components/Footer';
+import GalleryCard from '../components/GalleryCard';
 
 const ColorDiv = styled.div`
     width: 100vw;
+    min-height: 100vh;
     background-color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const MenuStyled = styled.div`
     height: 10vh;
-    width: 100vw;    
+    width: 100vw; 
+    margin-bottom: 10vh;   
     display: flex;
     justify-content: space-between;
     top: 0;
@@ -58,6 +64,7 @@ const Gallery = () => {
                     <StyledLink to='/Cart'><H3 text='CART' fontSize='20px' color='#F7F7F7'/></StyledLink>
                 </CartStyled>
             </MenuStyled>
+            <GalleryCard />
             <Footer />
         </ColorDiv>
 
