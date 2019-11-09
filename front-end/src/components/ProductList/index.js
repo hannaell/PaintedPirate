@@ -5,9 +5,10 @@ import WooCommerceRestApi from '@woocommerce/woocommerce-rest-api';
 
 const ListStyled = styled.div`
     height: 90vh;
-    width: 100vw;
+    width: 63vw;
+    margin-left:1vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 
@@ -61,9 +62,9 @@ const ProductList = () => {
             })
             .catch((error) => {
                 // Invalid request, for 4xx and 5xx statuses
-                console.log('Response Status:', error.response.status);
-                console.log('Response Headers:', error.response.headers);
-                console.log('Response Data:', error.response.data);
+                // console.log('Response Status:', error.response.status);
+                // console.log('Response Headers:', error.response.headers);
+                // console.log('Response Data:', error.response.data);
             })
             .finally(() => {
                 // Always executed.
@@ -71,15 +72,23 @@ const ProductList = () => {
     }, []);
 
     console.log(products);
+    console.log(products[0] && products[0].images[0].src);
     return(
         <ListStyled>
-            {products.map(product => (
-                    <ProductCard  {...product} 
-                    key = {product.id}
-                    productName = {product.name}
-                    productPrice = {product.price}
-                    productImg = {product.images}
-                     />
+            {
+            products.map((product, index) => (
+                <ProductCard  {...product} 
+                key = {product.id}
+                productName = {product.name}
+                productPrice = {product.price}
+                // productImg = {product.images[0].src}
+                productImg = {product.images.map(productImages => {
+                        return ({keys: productImages.id, src: productImages.src})
+                        // (<img key={productImages.id} src={productImages.src}></img>)
+                        
+                    })
+                }
+                />
                 ))}
         </ListStyled>
     );

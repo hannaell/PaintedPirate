@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import WooCommerceRestApi from '@woocommerce/woocommerce-rest-api';
+import styled from 'styled-components';
 import { P } from '../typo';
+
+const CategoriesStyled = styled.div`
+    width: 12vw;
+    margin-left: 5.9vw;
+`;
 
 const api = new WooCommerceRestApi({
     url: 'https://paintedpirate.test',
@@ -8,7 +14,6 @@ const api = new WooCommerceRestApi({
     consumerSecret: process.env.REACT_APP_CONSUMER_SECRET,
     version: 'wc/v3'
 });
-
 
 api.get('products/categories', {
         per_page: 20, // 20 products per page
@@ -61,7 +66,7 @@ const ProductCategories = () => {
 
         console.log(categories);
     return(
-        <div>
+        <CategoriesStyled>
             {categories.map(category => (
                     <P  {...category} 
                         key = {category.id}
@@ -69,7 +74,7 @@ const ProductCategories = () => {
                     />
                     // ,console.log(category.display)
                 ))}
-        </div>
+        </CategoriesStyled >
     );
 }
 

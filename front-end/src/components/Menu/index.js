@@ -43,12 +43,12 @@ const Menu = () => {
     return(
         <MenuStyled>
             <DivStyled>
-                <StyledLink to='/Gallery'><H3 text='GALLERY' fontSize='20px' /></StyledLink>
-                <StyledLink to='/Contact'><H3 text='CONTACT' fontSize='20px' /></StyledLink>
-                <StyledLink to='/Shop'><H3 text='SHOP' fontSize='20px' /></StyledLink>
+                <StyledLink to='/Gallery'><H3 text='GALLERY' fontSize='20px' fontWeight='500' /></StyledLink>
+                <StyledLink to='/Contact'><H3 text='CONTACT' fontSize='20px' fontWeight='500' /></StyledLink>
+                <StyledLink to='/Shop'><H3 text='SHOP' fontSize='20px' fontWeight='500' /></StyledLink>
             </DivStyled>
             <CartStyled>
-                <StyledLink to='/Cart'><H3 text='CART' fontSize='20px' /></StyledLink>
+                <StyledLink to='/Cart'><H3 text='CART' fontSize='20px' fontWeight='500' /></StyledLink>
             </CartStyled>
         </MenuStyled>
     );
