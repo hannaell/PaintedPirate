@@ -5,9 +5,10 @@ import WooCommerceRestApi from '@woocommerce/woocommerce-rest-api';
 
 const ListStyled = styled.div`
     height: 90vh;
-    width: 100vw;
+    width: 63vw;
+    margin-left:1vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 
