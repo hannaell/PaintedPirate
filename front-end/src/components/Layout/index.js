@@ -5,7 +5,9 @@ import Footer from '../Footer';
 
 const Wrapper = styled.div`
     margin: 0 auto;
-`
+    min-height: 100vh;
+    background-color: #F7F7F7;
+`;
 
 const Layout = (props) => {
     return(

@@ -5,6 +5,7 @@ import Menu from '../components/Menu';
 import ProductList from '../components/ProductList';
 import ProductCategories from '../components/ProductCategoies';
 import Footer from '../components/Footer';
+import Layout from '../components/Layout';
 
 const ColorDiv = styled.div `
     width: 100vw;
@@ -36,10 +37,11 @@ const CategoryDiv = styled.div`
 
 const Shop = () => {
     return(
-        <ColorDiv>
-            <Menu />
+        // <ColorDiv>
+        //     <Menu />
+        <Layout>
             <ListDiv>
-                    <ProductCategories />
+                <ProductCategories />
                 <ProductDiv>
                     <CategoryDiv>
                         <H3 text='NEW ARRIVALS' fontSize='20px' fontWeight='500'/>
@@ -47,8 +49,10 @@ const Shop = () => {
                     <ProductList />
                 </ProductDiv>
             </ListDiv>
-            <Footer />
-        </ColorDiv>
+
+        </Layout>
+        //     <Footer />
+        // </ColorDiv>
     );
 }
 

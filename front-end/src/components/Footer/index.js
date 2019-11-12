@@ -4,15 +4,15 @@ import styled from 'styled-components';
 import { P } from '../typo';
 
 const FooterStyled = styled.div`
-    height: 15vh;
+    height: 22vh;
     width: 100vw;
     background-color: #1A1A1A;
-    display:flex;
+    display: flex;
     align-items: center;
 `;
 
 const DivStyled = styled.div`
-    height: 15vh;
+    height: 12vh;
     width: 22vw;
     margin-left: 6vw;
     display: flex;

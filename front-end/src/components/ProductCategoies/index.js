@@ -67,13 +67,14 @@ const ProductCategories = () => {
         console.log(categories);
     return(
         <CategoriesStyled>
-            {categories.map(category => (
+            {/* {categories.map(category => (
+                {...category.id === 0 } ?
                     <P  {...category} 
                         key = {category.id}
                         text = {category.name}
-                    />
-                    // ,console.log(category.display)
-                ))}
+                    /> 
+                    // console.log(category.display)
+                ))} */}
         </CategoriesStyled >
     );
 }
