@@ -9,14 +9,12 @@ const CarouselStyled = styled.div`
     align-items: center;
 `;
 
-const ButtonStyled = styled.button`
-    height: 2vh;
-    width: 6vw;
+const ButtonStyled = styled.img`
+    width: 2.1vw;
 `;
 
 const ImgDiv = styled.div`
     width: 41.6vw;
-    margin-top: 12vh;
 `;
 
 const ImgStyled = styled.img`
@@ -36,7 +34,7 @@ const GalleryCard = () => {
     
     return (
         < CarouselStyled >
-            <ButtonStyled onClick={() => embla.scrollPrev()}>Prev</ButtonStyled>
+            <ButtonStyled src='../images/left-arrow-button.svg' onClick={() => embla.scrollPrev()}></ButtonStyled>
             <EmblaCarouselReact
                 emblaRef={setEmbla}
                 options={{ loop: true }}
@@ -49,9 +47,9 @@ const GalleryCard = () => {
                     <ImgDiv style={{ flex: '0 0 100%' }}><ImgStyled src='images/ppbild5.jpg'></ImgStyled></ImgDiv>
                 </div>
             </EmblaCarouselReact>
-            <ButtonStyled onClick={() => embla.scrollNext()}>Next</ButtonStyled>
+           <ButtonStyled src='../images/right-arrow-button.svg' onClick={() => embla.scrollNext()}></ButtonStyled>
         </CarouselStyled>
-    )
+    );
 }
 
 export default GalleryCard;
