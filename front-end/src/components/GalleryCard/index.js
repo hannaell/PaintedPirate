@@ -42,10 +42,11 @@ const GalleryCard = () => {
                 options={{ loop: true }}
             >
                 <div style={{ display: 'flex' }}>
-                    <ImgDiv style={{ flex: '0 0 100%' }}><ImgStyled src='images/paintedpiratelogo.jpg'></ImgStyled></ImgDiv>
-                    <ImgDiv style={{ flex: '0 0 100%' }}><ImgStyled src='images/tattooPP.jpg'></ImgStyled></ImgDiv>
-                    <ImgDiv style={{ flex: '0 0 100%' }}><ImgStyled src='images/tattooPP2.jpg'></ImgStyled></ImgDiv>
-                    <ImgDiv style={{ flex: '0 0 100%' }}><ImgStyled src='images/paintedpirate-tshirt-mockup-merch.jpg'></ImgStyled></ImgDiv>
+                    <ImgDiv style={{ flex: '0 0 100%' }}><ImgStyled src='images/bild1.jpg'></ImgStyled></ImgDiv>
+                    <ImgDiv style={{ flex: '0 0 100%' }}><ImgStyled src='images/ppbild2.jpg'></ImgStyled></ImgDiv>
+                    <ImgDiv style={{ flex: '0 0 100%' }}><ImgStyled src='images/ppbild3.jpg'></ImgStyled></ImgDiv>
+                    <ImgDiv style={{ flex: '0 0 100%' }}><ImgStyled src='images/ppbild4.jpg'></ImgStyled></ImgDiv>
+                    <ImgDiv style={{ flex: '0 0 100%' }}><ImgStyled src='images/ppbild5.jpg'></ImgStyled></ImgDiv>
                 </div>
             </EmblaCarouselReact>
             <ButtonStyled onClick={() => embla.scrollNext()}>Next</ButtonStyled>
