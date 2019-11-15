@@ -11,8 +11,7 @@ const ListStyled = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
-`
+`;
 
 const api = new WooCommerceRestApi({
     url: 'https://paintedpirate.test',
@@ -71,25 +70,25 @@ const ProductList = () => {
             });
     }, []);
 
-    console.log(products);
-    console.log(products[0] && products[0].images[0].src);
+    // console.log(products);
+    // console.log(products[0] && products[0].images[0].src);
     return(
         <ListStyled>
             {
             products.map((product, index) => (
                 <ProductCard  {...product} 
-                key = {product.id}
-                productName = {product.name}
-                productPrice = {product.price}
-                // productImg = {product.images[0].src}
-                productImg = {product.images.map(productImages => {
-                        return ({keys: productImages.id, src: productImages.src})
-                        // (<img key={productImages.id} src={productImages.src}></img>)
-                        
-                    })
-                }
+                    key = {product.id}
+                    productName = {product.name}
+                    productPrice = {product.price}
+                    // productImg = {product.images[0].src}
+                    productImg = {product.images.map(productImages => {
+                            return ({keys: productImages.id, src: productImages.src})
+                            // (<img key={productImages.id} src={productImages.src}></img>)
+                            
+                        })
+                    }
                 />
-                ))}
+            ))}
         </ListStyled>
     );
 }

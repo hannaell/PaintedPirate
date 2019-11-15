@@ -45,13 +45,23 @@ api.get('products/categories', {
 
 const ProductCategories = () => {
         const [categories, setCategories] = useState([]);
+        const [subCategories, setSubCategories] = useState([]);
+        const [toggle, setToggle] = useState(false);
 
         useEffect(() => {
             api.get('products/categories', {
                     per_page: 20, // 20 products per page
                 })
                 .then((response) => {
-                    setCategories(response.data)
+                    let categories = response.data.filter(category => {
+                        return category.parent === 0;
+                    });
+                    setCategories(categories)
+                    
+                    let subCategories = response.data.filter(category => {
+                        return category.parent !== 0;
+                    });
+                    setSubCategories(subCategories)
                 })
                 .catch((error) => {
                     // Invalid request, for 4xx and 5xx statuses
@@ -64,17 +74,85 @@ const ProductCategories = () => {
                 });
         }, []);
 
+        const toggleCategory = () => {
+            if(toggle === false) {
+                setToggle(true);
+                
+            } else if(toggle === true) {
+                setToggle(false);
+            }
+        };
+
+        const updateProducts = () => {
+            
+        }
+
+        // let name;
+        // const categoryInfo = () => {
+        //     const parent = subCategories.map(subCategory => (
+        //          subCategory.parent
+                 
+        //     ));
+
+        //     const id = categories.map(category => (
+        //         category.id
+        //     ));
+
+            
+        //     if(id === parent){
+        //         return name = subCategories.map(subCategory => (
+        //             <li 
+        //                 key={subCategory.id}
+        //                 parent={subCategory.parent}
+        //             >
+        //                 {subCategory.name}</li>
+        //         ))
+        //     }
+            
+        // } 
+
         console.log(categories);
+        console.log(subCategories);
+        
     return(
         <CategoriesStyled>
             {/* {categories.map(category => (
-                {...category.id === 0 } ?
                     <P  {...category} 
                         key = {category.id}
                         text = {category.name}
                     /> 
-                    // console.log(category.display)
+                    // ,console.log(category.parent)
                 ))} */}
+            {/* {categories.map(category => (
+                // {...category.id === 0 } ?
+                    <P  {...category} 
+                        key = {category.id}
+                        text = {category.name}
+                    /> 
+                    // ,console.log(category.parent)
+                ))} */}
+                {categories.map(category => (
+                    <ul>
+                        <li key={category.id} onClick={() => {toggleCategory()} }>{category.name}</li>
+                        
+                        {/* {toggle === true && 
+                            
+                            <>
+                            {name}
+                            </>
+
+                            
+                                //  {subCategories.map(subCategory => (
+                                //     <li 
+                                //         key={subCategory.id}
+                                //         parent={subCategory.parent}
+                                //     >
+                                //     {subCategory.name}</li>
+                                //     // ,console.log(subCategory.parent)
+                                // ))} 
+                        } */}
+                    </ul>
+                ))}
         </CategoriesStyled >
     );
 }
