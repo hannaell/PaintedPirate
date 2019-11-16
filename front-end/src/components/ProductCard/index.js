@@ -22,7 +22,7 @@ const PriceStyled = styled.div`
 
 const ProductCard = (props) => {
     return(
-        <CardStyled>
+        <CardStyled onClick={() => { props.onClick(props.slug) }}>
             <ImgStyled {...props.productImg[0]} alt='product img'></ImgStyled>
             <H3 text={props.productName} fontSize='20px' fontWeight='500' marginTop='1.5vh'/>
             <PriceStyled>
