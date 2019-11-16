@@ -33,11 +33,11 @@ api.get('products', {
     // })
     .then((response) => {
         // Successful request
-        console.log('Response Status:', response.status);
-        console.log('Response Headers:', response.headers);
-        console.log('Response Data:', response.data);
-        console.log('Total of pages:', response.headers['x-wp-totalpages']);
-        console.log('Total of items:', response.headers['x-wp-total']);
+        // console.log('Response Status:', response.status);
+        // console.log('Response Headers:', response.headers);
+        // console.log('Response Data:', response.data);
+        // console.log('Total of pages:', response.headers['x-wp-totalpages']);
+        // console.log('Total of items:', response.headers['x-wp-total']);
     })
     .catch((error) => {
         // Invalid request, for 4xx and 5xx statuses
@@ -49,14 +49,17 @@ api.get('products', {
         // Always executed.
     });
 
-const ProductList = () => {
+const ProductList = (props) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
+        console.log('fetching again')
         api.get('products', {
                 per_page: 20, // 20 products per page
+                category: props.categoryId
             })
             .then((response) => {
+                console.log('response', response)
                 setProducts(response.data)
             })
             .catch((error) => {
@@ -68,23 +71,23 @@ const ProductList = () => {
             .finally(() => {
                 // Always executed.
             });
-    }, []);
+    }, [ props.categoryId ]);
 
     // console.log(products);
     // console.log(products[0] && products[0].images[0].src);
+    // console.log(products[0] && products[0].slug);
     return(
         <ListStyled>
             {
             products.map((product, index) => (
                 <ProductCard  {...product} 
+                    onClick={(props.onClick)}
                     key = {product.id}
+                    slug={product.slug}
                     productName = {product.name}
                     productPrice = {product.price}
-                    // productImg = {product.images[0].src}
                     productImg = {product.images.map(productImages => {
                             return ({keys: productImages.id, src: productImages.src})
-                            // (<img key={productImages.id} src={productImages.src}></img>)
-                            
                         })
                     }
                 />
