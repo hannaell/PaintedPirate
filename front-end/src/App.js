@@ -8,6 +8,7 @@ import Gallery from './view/gallery';
 import Cart from './view/cart';
 import Sitemap from './view/sitemap';
 import Returns from './view/returns';
+import Product from './view/product';
 
 function App() {
     
@@ -22,6 +23,7 @@ function App() {
             <Route path='/cart' component={Cart} />
             <Route path='/sitemap' component={Sitemap} />
             <Route path='/returns' component={Returns} />
+            <Route path='/product/:product' component={Product} />
         </Switch>        
       </header>
     </div>
