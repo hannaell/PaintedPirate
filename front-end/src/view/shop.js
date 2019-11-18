@@ -5,10 +5,10 @@ import { H3, P } from '../components/typo';
 import ProductList from '../components/ProductList';
 import Layout from '../components/Layout';
 
-const ColorDiv = styled.div`
-    width: 100vw;
-    background-color: #F7F7F7;
-`;
+// const ColorDiv = styled.div`
+//     width: 100vw;
+//     background-color: #F7F7F7;
+// `;
 
 const ListDiv = styled.div`
     width: 100vw;
