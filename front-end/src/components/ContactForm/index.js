@@ -52,7 +52,7 @@ class ContactForm extends React.Component {
     render() {
         const { status } = this.state;
         return (
-            < FormStyled
+            <FormStyled
                 onSubmit={this.submitForm}
                 action = 'https://formspree.io/xknwkzeb'
                 method='POST'

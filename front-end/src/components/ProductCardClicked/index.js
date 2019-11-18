@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { H1, H2, H3, P } from '../typo';
 import Layout from '../Layout';
 import ProductCategories from '../ProductCategoies';
+import { log } from 'util';
 
 const DivStyled = styled.div`
     height: 86.6vh;
@@ -15,12 +16,11 @@ const ImgDivStyled = styled.div`
     height: 73.4vh;
     width: 48.8vw;
     margin-top: 13.2vh;
-    background-color: aqua;
 `;
 
-const ImgStyled = styled.img`
-    width: 48.8vw;
-`;
+// const ImgStyled = styled.img`
+//     width: 48.8vw;
+// `;
 
 const RightDivStyled = styled.div`
     height: 73vh;
@@ -125,14 +125,12 @@ const BottomDivStyled = styled.div`
 `;
 
 const ProductCardClicked = (props) => {
-    
     return(
         <Layout>
             <DivStyled>
                 <ProductCategories />
-                {/* <img {...props.productImg[0]} alt='product img'></img> */}
                 <ImgDivStyled>
-                    <ImgStyled src={props.productImg} alt='product Img'></ImgStyled>
+                    {props.productImg}
                 </ImgDivStyled>
                 <RightDivStyled>
                     <H1 text={props.productName} textTransform='uppercase' fontStyle='italic' fontWeight='900'/>
@@ -153,7 +151,8 @@ const ProductCardClicked = (props) => {
                     </ButtonDivStyled>
                     <H3 text='Material' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh'/>
                     <H3 text='Details' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh'/>
-                    <P text={props.productDescription}/>
+                    {/* <P text={props.productDescription} /> */}
+                    {props.productDescription}
                     <H3 text='Shipping' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh'/>
                 </RightDivStyled>
             </DivStyled>

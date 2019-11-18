@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pannellum } from "pannellum-react";
-import myImage from "./studio.jpg";
+import myImage from "./studio2.jpg";
 
 const Panorama = () => (
     <div>
@@ -8,15 +8,15 @@ const Panorama = () => (
             width="100%"
             height="100vh"
             image={myImage}
-            pitch={10}
-            yaw={-50}
-            hfov={110}
+            pitch={0}
+            yaw={0}
+            hfov={115}
             vaov={85}
-            haov={310}
+            haov={360}
             maxPitch={40}
             minPitch={-40}
-            maxYaw={150}
-            minYaw={-140}
+            maxYaw={180}
+            minYaw={-160}
             keyboardZoom={false}
             mouseZoom={false}
             showZoomCtrl={false}

@@ -34,9 +34,12 @@ const CategoryDiv = styled.div`
 `;
 
 const CategoriesStyled = styled.div`
-    width: 12vw;
+    width: 14vw;
     margin-top: 2vh;
-    margin-left: 5.9vw;
+    margin-left: 3.9vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 `;
 
 const UlStyled = styled.ul`
@@ -131,14 +134,14 @@ const Shop = () => {
                                     setCategory(category.name); 
                                     setCategoryId(category.id)} }
                                     >
-                                    <P text={category.name} fontWeight='bold' />
+                                    <P text={category.name} fontWeight='bold' textTransform='uppercase'/>
                             </ListStyled>
                         </UlStyled>
                     ))}
                 </CategoriesStyled >
                 <ProductDiv>
                     <CategoryDiv>
-                        <H3 text={category} fontSize='20px' fontWeight='500'/>
+                        <H3 text={category} fontSize='20px' fontWeight='500' />
                     </CategoryDiv>
                     <ProductList categoryId={categoryId} onClick={clickProduct}/>
                 </ProductDiv>

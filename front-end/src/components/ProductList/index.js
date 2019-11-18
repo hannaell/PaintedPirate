@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ProductCard from '../ProductCard';
 
 const ListStyled = styled.div`
-    height: 90vh;
+    min-height: 90vh;
     width: 63vw;
     margin-left:1vw;
     display: flex;
