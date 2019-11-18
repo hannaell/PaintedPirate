@@ -46,25 +46,26 @@ const Product = (props) => {
     const [productInfo, setProductInfo] = useState({});
 
     useEffect(() => {
-       api.get(`products?slug=${slug}`, {
-               per_page: 20, // 20 products per page
-           })
-           .then((response) => {
-               console.log('response', response)
-               setProductInfo(response.data[0])
-           })
-           .catch((error) => {
-               // Invalid request, for 4xx and 5xx statuses
-               // console.log('Response Status:', error.response.status);
-               // console.log('Response Headers:', error.response.headers);
-               // console.log('Response Data:', error.response.data);
-           })
-           .finally(() => {
-               // Always executed.
-           });
-   }, []);
+        api.get(`products?slug=${slug}`, {
+                per_page: 20, // 20 products per page
+            })
+            .then((response) => {
+                 console.log('response', response)
+                setProductInfo(response.data[0])
+            })
+            .catch((error) => {
+                //Invalid request, for 4xx and 5xx statuses
+                // console.log('Response Status:', error.response.status);
+                // console.log('Response Headers:', error.response.headers);
+                // console.log('Response Data:', error.response.data);
+            })
+            .finally(() => {
+                // Always executed.
+            });
+    }, []);
 
     console.log('productInfo', productInfo);
+    console.log('productInfo Image', productInfo.images);
     return(
         <div>
             <ProductCardClicked
@@ -72,7 +73,7 @@ const Product = (props) => {
                 //             return ({keys: productImages.id, src: productImages.src})
                 //         })
                 //     } 
-                // productImg = {productInfo.images.src}
+                // productImg = {productInfo.images}
                 productName = {productInfo.name}
                 productPrice = {productInfo.price}
                 productDescription = {productInfo.description}
@@ -81,4 +82,4 @@ const Product = (props) => {
     );
 }
 
-export default Product
+export default Product;

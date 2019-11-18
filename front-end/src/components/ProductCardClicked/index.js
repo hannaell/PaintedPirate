@@ -125,13 +125,14 @@ const BottomDivStyled = styled.div`
 `;
 
 const ProductCardClicked = (props) => {
+    
     return(
         <Layout>
             <DivStyled>
                 <ProductCategories />
                 {/* <img {...props.productImg[0]} alt='product img'></img> */}
                 <ImgDivStyled>
-                    <ImgStyled src='' alt='product img'></ImgStyled>
+                    <ImgStyled src={props.productImg} alt='product Img'></ImgStyled>
                 </ImgDivStyled>
                 <RightDivStyled>
                     <H1 text={props.productName} textTransform='uppercase' fontStyle='italic' fontWeight='900'/>
