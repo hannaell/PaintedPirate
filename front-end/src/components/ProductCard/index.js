@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { H3, P } from '../typo';
+import { H3 } from '../typo';
 
 const CardStyled = styled.div`
     height: 65vh;
