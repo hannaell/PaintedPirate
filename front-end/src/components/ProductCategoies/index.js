@@ -1,47 +1,49 @@
 import React, { useState, useEffect } from 'react';
-import WooCommerceRestApi from '@woocommerce/woocommerce-rest-api';
+import { api } from '../WooCommerce';
 import styled from 'styled-components';
 import { P } from '../typo';
 
 const CategoriesStyled = styled.div`
-    width: 12vw;
-    margin-left: 5.9vw;
+    width: 17.4vw;
+    margin-top: 13.2vh;
+    /* margin-left: 5.9vw; */
 `;
 
-const api = new WooCommerceRestApi({
-    url: 'https://paintedpirate.test',
-    consumerKey: process.env.REACT_APP_CONSUMER_KEY,
-    consumerSecret: process.env.REACT_APP_CONSUMER_SECRET,
-    version: 'wc/v3'
-});
+const UlStyled = styled.ul`
+    list-style: none;
+`;
 
-api.get('products/categories', {
-        per_page: 20, // 20 products per page
-    })
-    // .then(res => res.json())
-    // .then((result) => {
-    //     this.setState({
-    //         isLoaded: true,
-    //         items: result.items
-    //     });
-    // })
-    .then((response) => {
-        // Successful request
-        console.log('Response Status:', response.status);
-        console.log('Response Headers:', response.headers);
-        console.log('Response Data:', response.data);
-        console.log('Total of pages:', response.headers['x-wp-totalpages']);
-        console.log('Total of items:', response.headers['x-wp-total']);
-    })
-    .catch((error) => {
-        // Invalid request, for 4xx and 5xx statuses
-        console.log('Response Status:', error.response.status);
-        console.log('Response Headers:', error.response.headers);
-        console.log('Response Data:', error.response.data);
-    })
-    .finally(() => {
-        // Always executed.
-    });
+const ListStyled = styled.li`
+    text-decoration: none;
+`;
+
+// api.get('products/categories', {
+//         per_page: 20, // 20 products per page
+//     })
+//     // .then(res => res.json())
+//     // .then((result) => {
+//     //     this.setState({
+//     //         isLoaded: true,
+//     //         items: result.items
+//     //     });
+//     // })
+//     .then((response) => {
+//         // Successful request
+//         console.log('Response Status:', response.status);
+//         console.log('Response Headers:', response.headers);
+//         console.log('Response Data:', response.data);
+//         console.log('Total of pages:', response.headers['x-wp-totalpages']);
+//         console.log('Total of items:', response.headers['x-wp-total']);
+//     })
+//     .catch((error) => {
+//         // Invalid request, for 4xx and 5xx statuses
+//         console.log('Response Status:', error.response.status);
+//         console.log('Response Headers:', error.response.headers);
+//         console.log('Response Data:', error.response.data);
+//     })
+//     .finally(() => {
+//         // Always executed.
+//     });
 
 const ProductCategories = () => {
         const [categories, setCategories] = useState([]);
@@ -132,8 +134,13 @@ const ProductCategories = () => {
                     // ,console.log(category.parent)
                 ))} */}
                 {categories.map(category => (
-                    <ul>
-                        <li key={category.id} onClick={() => {toggleCategory()} }>{category.name}</li>
+                    <UlStyled>
+                        <ListStyled 
+                            key={category.id} 
+                            // onClick={() => {toggleCategory()} }
+                        >
+                            <P text={category.name} fontWeight='bold' textTransform='uppercase' />
+                        </ListStyled>
                         
                         {/* {toggle === true && 
                             
@@ -151,7 +158,7 @@ const ProductCategories = () => {
                                 //     // ,console.log(subCategory.parent)
                                 // ))} 
                         } */}
-                    </ul>
+                    </UlStyled>
                 ))}
         </CategoriesStyled >
     );
