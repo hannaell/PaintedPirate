@@ -5,7 +5,10 @@ import { P } from '../typo';
 
 const CategoriesStyled = styled.div`
     width: 17.4vw;
-    margin-top: 13.2vh;
+    margin-top: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     /* margin-left: 5.9vw; */
 `;
 

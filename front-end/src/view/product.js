@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { api } from '../components/WooCommerce'
 import ProductCardClicked from '../components/ProductCardClicked';
+import styled from 'styled-components';
+import { P } from '../components/typo';
 // import WooCommerceRestApi from '@woocommerce/woocommerce-rest-api';
 
 // const api = new WooCommerceRestApi({
@@ -40,6 +42,10 @@ import ProductCardClicked from '../components/ProductCardClicked';
 //         // Always executed.
 //     });
 
+const ImgStyled = styled.img `
+    width: 48.8vw;
+`;
+
 const Product = (props) => {
     console.log('props', props)
     const slug = props.match.params.product
@@ -66,17 +72,28 @@ const Product = (props) => {
 
     console.log('productInfo', productInfo);
     console.log('productInfo Image', productInfo.images);
+
     return(
         <div>
             <ProductCardClicked
+                
                 // productImg = {productInfo.images.map(productImages => {
                 //             return ({keys: productImages.id, src: productImages.src})
                 //         })
-                //     } 
-                // productImg = {productInfo.images}
+                //     }
+                
+                productImg = {
+                    (productInfo.images && productInfo.images.length > 0 ? <ImgStyled src = {
+                            productInfo.images[0].src
+                        }
+                        /> : null)}                    
                 productName = {productInfo.name}
                 productPrice = {productInfo.price}
-                productDescription = {productInfo.description}
+                productDescription = {
+                    (productInfo.description && productInfo.description.length > 0 ? <P text = {
+                        productInfo.description.replace('<p>', '').replace('</p>', '')
+                    }
+                     /> : null)}
             />
         </div>
     );

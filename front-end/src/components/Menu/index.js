@@ -15,8 +15,8 @@ const MenuStyled = styled.div`
 
 const DivStyled = styled.div`
     height: 100%;
-    width: 25vw;
-    margin-left: 13vw;
+    width: 35vw;
+    margin-left: 5vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,7 +33,7 @@ const StyledLink = styled(Link)`
 const CartStyled = styled.div`
     height: 100%;
     width: 5vw;
-    padding-right: 13vw;
+    margin-right: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,6 +43,7 @@ const Menu = () => {
     return(
         <MenuStyled>
             <DivStyled>
+                <StyledLink to='/'><img src='../images/PP-LOGO.svg'></img></StyledLink>
                 <StyledLink to='/Gallery'><H3 text='GALLERY' fontSize='20px' fontWeight='500' /></StyledLink>
                 <StyledLink to='/Contact'><H3 text='CONTACT' fontSize='20px' fontWeight='500' /></StyledLink>
                 <StyledLink to='/Shop'><H3 text='SHOP' fontSize='20px' fontWeight='500' /></StyledLink>

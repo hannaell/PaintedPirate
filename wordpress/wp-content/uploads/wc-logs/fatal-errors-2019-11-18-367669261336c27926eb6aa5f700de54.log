@@ -1,0 +1,24 @@
+2019-11-18T13:34:43+00:00 CRITICAL syntax error, unexpected end of file in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php on line 118
+
+2019-11-18T13:34:43+00:00 CRITICAL syntax error, unexpected end of file in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php on line 118
+
+2019-11-18T13:53:52+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_filter(), 1 passed in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php on line 100 and at least 2 expected in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-includes/plugin.php:278
+Stack trace:
+#0 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php(100): remove_filter('wpautop')
+#1 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-settings.php(499): include('/Users/hannaell...')
+#2 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-config.php(93): require_once('/Users/hannaell...')
+#3 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-load.php(37): require_once('/Users/hannaell...')
+#4 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-blog-header.php(13): require_once('/Users/hannaell...')
+#5 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/index.php(17): require('/Users/hannaell...')
+#6 / in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-includes/plugin.php on line 278
+
+2019-11-18T13:53:52+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_filter(), 1 passed in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php on line 100 and at least 2 expected in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-includes/plugin.php:278
+Stack trace:
+#0 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php(100): remove_filter('wpautop')
+#1 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-settings.php(499): include('/Users/hannaell...')
+#2 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-config.php(93): require_once('/Users/hannaell...')
+#3 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-load.php(37): require_once('/Users/hannaell...')
+#4 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-blog-header.php(13): require_once('/Users/hannaell...')
+#5 /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/index.php(17): require('/Users/hannaell...')
+#6 / in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-includes/plugin.php on line 278
+

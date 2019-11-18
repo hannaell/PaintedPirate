@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { H2 } from '../typo';
+import { H2, P } from '../typo';
 import GoogleMapReact from 'google-map-react';
 import styled from 'styled-components';
 
@@ -36,6 +36,7 @@ class Map extends Component {
         return (
             <DivStyled>
                 <H2 text='Location' fontWeight='bold' marginLeft='13vw' marginBottom='1vh' />
+                <P text='BERTSHULT LOFTÅS 100, 438 93 LANDVETTER' marginLeft='13vw'marginBottom='1vh' />
                 <MapStyled>
                     <GoogleMapReact
                         bootstrapURLKeys={{ key: process.env.REACT_APP_MAPS_API_KEY }}

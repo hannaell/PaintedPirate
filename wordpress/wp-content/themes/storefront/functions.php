@@ -97,6 +97,8 @@ function add_cors_http_header(){
 }
 add_action('init','add_cors_http_header');
 
+
+
 // function  sections_endpoint( $request_data ) {
 //     $args = array(
 //         'product_name' => 'name',
