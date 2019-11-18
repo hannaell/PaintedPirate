@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { api } from '../components/WooCommerce/test'
-import {P} from '../components/typo';
+import { api } from '../components/WooCommerce'
+import ProductCardClicked from '../components/ProductCardClicked';
 // import WooCommerceRestApi from '@woocommerce/woocommerce-rest-api';
 
 // const api = new WooCommerceRestApi({
@@ -66,7 +66,18 @@ const Product = (props) => {
 
     console.log('productInfo', productInfo);
     return(
-        <div><P text={productInfo.name}/></div>
+        <div>
+            <ProductCardClicked
+                // productImg = {productInfo.images.map(productImages => {
+                //             return ({keys: productImages.id, src: productImages.src})
+                //         })
+                //     } 
+                // productImg = {productInfo.images.src}
+                productName = {productInfo.name}
+                productPrice = {productInfo.price}
+                productDescription = {productInfo.description}
+            />
+        </div>
     );
 }
 
