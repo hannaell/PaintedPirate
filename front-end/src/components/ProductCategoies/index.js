@@ -10,7 +10,6 @@ const CategoriesStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* margin-left: 5.9vw; */
 `;
 
 const UlStyled = styled.ul`

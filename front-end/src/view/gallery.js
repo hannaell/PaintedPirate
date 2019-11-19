@@ -56,7 +56,7 @@ const Gallery = () => {
         <ColorDiv>
             <MenuStyled>
                 <DivStyled>
-                    <StyledLink to='/'><img src='../images/PP-LOGO-white.svg' ></img></StyledLink>
+                    <StyledLink to='/'><img src='../images/PP-LOGO-white.svg'></img></StyledLink>
                     <StyledLink to='/Gallery'><H3 text='GALLERY' fontSize='20px' color='#F7F7F7'/></StyledLink>
                     <StyledLink to='/Contact'><H3 text='CONTACT' fontSize='20px' color='#F7F7F7'/></StyledLink>
                     <StyledLink to='/Shop'><H3 text='SHOP' fontSize='20px' color='#F7F7F7'/></StyledLink>

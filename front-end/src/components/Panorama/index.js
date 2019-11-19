@@ -26,7 +26,6 @@ const Panorama = () => (
             }}
         >
         </Pannellum>
-
     </div>
 );
 

@@ -42,14 +42,14 @@ const Product = (props) => {
                     (productInfo.images && productInfo.images.length > 0 ? <ImgStyled src = {
                             productInfo.images[0].src
                     }
-                    /> : null)}                    
+                /> : null)}                    
                 productName = {productInfo.name}
                 productPrice = {productInfo.price}
                 productDescription = {
                     (productInfo.description && productInfo.description.length > 0 ? <P text = {
                         productInfo.description.replace('<p>', '').replace('</p>', '')
                     }
-                    /> : null)}
+                /> : null)}
             />
         </div>
     );

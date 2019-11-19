@@ -132,7 +132,7 @@ const Shop = () => {
                                     setCategory(category.name); 
                                     setCategoryId(category.id)} }
                                     >
-                                    <P text={category.name} fontWeight='bold' textTransform='uppercase'/>
+                                <P text={category.name} fontWeight='bold' textTransform='uppercase'/>
                             </ListStyled>
                         </UlStyled>
                     ))}

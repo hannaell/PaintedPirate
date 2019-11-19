@@ -3,18 +3,9 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { H3 } from '../components/typo';    
 import Panorama from '../components/Panorama';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 
-// const ColorDiv = styled.div `
-//     width: 100vw;
-//     min-height: 100vh;
-//     background-color: #1A1A1A;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// `;
-
-const MenuStyled = styled.div `
+const MenuStyled = styled.div`
     height: 10vh;
     width: 100vw; 
     margin-bottom: 10vh;   
@@ -24,9 +15,9 @@ const MenuStyled = styled.div `
     left: 0;
     position: fixed;
     z-index: 2;
-`
+`;
 
-const DivStyled = styled.div `
+const DivStyled = styled.div`
     height: 100%;
     width: 35vw;
     margin-left: 5vw;
@@ -34,17 +25,16 @@ const DivStyled = styled.div `
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-`
+`;
 
-const StyledLink = styled(Link)
-`
+const StyledLink = styled(Link)`
     text-decoration: none;
     &:focus, &:hover, &:visited, &:link, &:active {
         text-decoration: none;
     }
 `;
 
-const CartStyled = styled.div `
+const CartStyled = styled.div`
     height: 100%;
     width: 5vw;
     margin-right: 5vw;

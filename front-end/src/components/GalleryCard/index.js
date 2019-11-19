@@ -30,9 +30,9 @@ const GalleryCard = () => {
     const [embla, setEmbla] = useState(null) 
     useEffect(() => {
         if (embla) {
-        embla.on('select', () => {
-            console.log(`Current index is ${embla.selectedScrollSnap()}`)
-        })
+            embla.on('select', () => {
+                console.log(`Current index is ${embla.selectedScrollSnap()}`)
+            })
         }
     }, [embla])
     
