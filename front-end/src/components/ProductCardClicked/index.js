@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { H1, H2, H3 } from '../typo';
+import { H1, H2, H3, P } from '../typo';
 import Layout from '../Layout';
 import ProductCategories from '../ProductCategoies';
 
@@ -18,7 +18,7 @@ const ImgDivStyled = styled.div`
 `;
 
 const RightDivStyled = styled.div`
-    min-height: 73vh;
+    min-height: 100vh;
     width: 17.3vw;
     margin-top: 13.2vh;
     margin-left: 1.2vw;
@@ -76,25 +76,44 @@ const BlackStyled = styled.div`
 `;
 
 const ButtonDivStyled = styled.div`
-    height: 12vh;
+    min-height: 14vh;
     width: 14.4vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 `;
 
-const WhiteButtonStyled = styled.button`
+const WhiteButtonStyled = styled.div`
     height: 5.5vh;
     width: 14.3vw;
     background-color: #F7F7F7;
     border: 2px solid #060606;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 `;
 
-const BlackButtonStyled = styled.button`
+const SizeDiv = styled.div`
     height: 5.5vh;
     width: 14.3vw;
+    background-color: #F7F7F7;
+    border-left: 2px solid #060606;
+    border-right: 2px solid #060606;
+    border-bottom: 2px solid #060606;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+`;
+
+const BlackButtonStyled = styled.div`
+    height: 5.5vh;
+    width: 14.3vw;
+    margin-top: 1vh;
     background-color: #060606;
-    border: 2px solid #060606;    
+    border: 2px solid #060606;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
 `;
 
 const DescriptionDiv = styled.div`
@@ -128,6 +147,7 @@ const BottomDivStyled = styled.div`
 const ProductCardClicked = (props) => {
     const [toggleDescription, setToggleDescription] = useState(false);
     const [toggleMaterial, setToggleMaterial] = useState(false);
+    const [toggleSize, setToggleSize] = useState(false);
 
     // const toggleDescription = () => {
     //     if (toggle === false) {
@@ -159,7 +179,16 @@ const ProductCardClicked = (props) => {
                         <BlackStyled></BlackStyled>
                     </ColorStyled>
                     <ButtonDivStyled>
-                        <WhiteButtonStyled><H3 text='Select Size' fontSize='20px' textTransform='uppercase'/></WhiteButtonStyled>
+                        <WhiteButtonStyled onClick={() => {setToggleSize(!toggleSize)}}>
+                            <H3 text='Select Size' fontSize='20px' textTransform='uppercase'/>
+                        </WhiteButtonStyled>
+                        {toggleSize &&
+                            <div>
+                                <SizeDiv><P text='S' marginLeft='1.5vw'/></SizeDiv>
+                                <SizeDiv><P text='M' marginLeft='1.5vw'/></SizeDiv>
+                                <SizeDiv><P text='L' marginLeft='1.5vw'/></SizeDiv>
+                            </div>
+                        }
                         <BlackButtonStyled><H3 text='Add To Bag' color='#F7F7F7' fontSize='20px' textTransform='uppercase'/></BlackButtonStyled>
                     </ButtonDivStyled>
                     <H3 text='Material' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh' onClick={() => {setToggleMaterial(!toggleMaterial)}}/>

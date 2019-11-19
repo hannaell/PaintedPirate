@@ -9,7 +9,7 @@ const Panorama = () => (
             height="100vh"
             image={myImage}
             pitch={0}
-            yaw={0}
+            yaw={-40}
             hfov={115}
             vaov={85}
             haov={360}

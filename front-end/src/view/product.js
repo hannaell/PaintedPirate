@@ -32,7 +32,7 @@ const Product = (props) => {
             });
     }, []);
 
-    console.log('productInfo', productInfo);
+    // console.log('productInfo', productInfo);
     // console.log('productInfo Image', productInfo.images);
 
     return(
