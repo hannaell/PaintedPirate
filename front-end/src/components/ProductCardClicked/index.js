@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { H1, H2, H3 } from '../typo';
 import Layout from '../Layout';
@@ -126,6 +126,17 @@ const BottomDivStyled = styled.div`
 `;
 
 const ProductCardClicked = (props) => {
+    const [toggle, setToggle] = useState(false);
+
+    // const toggleDescription = () => {
+    //     if (toggle === false) {
+    //         setToggle(true);
+
+    //     } else if (toggle === true) {
+    //         setToggle(false);
+    //     }
+    // };
+
     return(
         <Layout>
             <DivStyled>
@@ -151,10 +162,13 @@ const ProductCardClicked = (props) => {
                         <BlackButtonStyled><H3 text='Add To Bag' color='#F7F7F7' fontSize='20px' textTransform='uppercase'/></BlackButtonStyled>
                     </ButtonDivStyled>
                     <H3 text='Material' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh'/>
-                    <H3 text='Details' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh'/>
-                    <DescriptionDiv>
+                    <H3 text='Details' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh' onClick={() => {setToggle(!toggle)}}/>
+                    {toggle && <DescriptionDiv>
                         {props.productDescription}
-                    </DescriptionDiv>
+                    </DescriptionDiv>}
+                    {/* <DescriptionDiv>
+                        {props.productDescription}
+                    </DescriptionDiv> */}
                     <H3 text='Shipping' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh'/>
                 </RightDivStyled>
             </DivStyled>
