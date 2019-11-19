@@ -24,12 +24,11 @@ const ProductCard = (props) => {
     return(
         <CardStyled onClick={() => { props.onClick(props.slug) }}>
             <ImgStyled {...props.productImg[0]} alt='product img'></ImgStyled>
-            <H3 text={props.productName} fontSize='20px' fontWeight='500' marginTop='1.5vh'/>
+            <H3 text={props.productName} fontSize='20px' fontWeight='900' marginTop='1.5vh' textTransform='uppercase'/>
             <PriceStyled>
                 <H3 text={props.productPrice} fontSize='20px' fontWeight='500' marginTop='6.9vh' marginRight='5px'/>
                 <H3 text='SEK' fontSize='20px' fontWeight='500' marginTop='6.9vh' />
-            </PriceStyled>
-            
+            </PriceStyled>            
         </CardStyled>
     );
 }
