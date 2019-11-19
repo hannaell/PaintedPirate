@@ -11,7 +11,7 @@ const MenuStyled = styled.div`
     top: 0;
     left: 0;
     position: fixed;
-`
+`;
 
 const DivStyled = styled.div`
     height: 100%;
@@ -21,7 +21,7 @@ const DivStyled = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-`
+`;
 
 const StyledLink = styled(Link)`
     text-decoration: none;
