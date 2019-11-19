@@ -5,11 +5,6 @@ import { H3, P } from '../components/typo';
 import ProductList from '../components/ProductList';
 import Layout from '../components/Layout';
 
-// const ColorDiv = styled.div`
-//     width: 100vw;
-//     background-color: #F7F7F7;
-// `;
-
 const ListDiv = styled.div`
     width: 100vw;
     padding-top: 12.7vh;
@@ -35,7 +30,7 @@ const CategoryDiv = styled.div`
 
 const CategoriesStyled = styled.div`
     width: 14vw;
-    margin-top: 2vh;
+    margin-top: 30vh;
     margin-left: 3.9vw;
     display: flex;
     flex-direction: column;
@@ -44,6 +39,9 @@ const CategoriesStyled = styled.div`
 
 const UlStyled = styled.ul`
     list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2.7vh;
 `;
 
 const ListStyled = styled.li`
@@ -134,7 +132,7 @@ const Shop = () => {
                                     setCategory(category.name); 
                                     setCategoryId(category.id)} }
                                     >
-                                    <P text={category.name} fontWeight='bold' textTransform='uppercase'/>
+                                <P text={category.name} fontWeight='bold' textTransform='uppercase'/>
                             </ListStyled>
                         </UlStyled>
                     ))}

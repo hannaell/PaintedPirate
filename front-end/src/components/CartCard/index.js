@@ -5,7 +5,6 @@ import { H2, P } from '../typo';
 const CardStyled = styled.div`
     height: 37vh;
     width: 48.7vw;
-    /* background-color: aqua; */
     border-bottom: 1px solid #686A5C;
     display: flex;
 `;
@@ -27,10 +26,9 @@ const TextDiv = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-
 `;
 
-const InfoTextDiv = styled.div `
+const InfoTextDiv = styled.div`
     height: 15vh;
     width: 10vw;
     display: flex;

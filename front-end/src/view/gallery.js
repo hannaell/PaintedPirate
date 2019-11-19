@@ -23,7 +23,7 @@ const MenuStyled = styled.div`
     top: 0;
     left: 0;
     position: fixed;
-`
+`;
 
 const DivStyled = styled.div`
     height: 100%;
@@ -33,7 +33,7 @@ const DivStyled = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-`
+`;
 
 const StyledLink = styled(Link)`
     text-decoration: none;
@@ -56,19 +56,18 @@ const Gallery = () => {
         <ColorDiv>
             <MenuStyled>
                 <DivStyled>
-                    <StyledLink to='/'><img src='../images/PP-LOGO-white.svg' ></img></StyledLink>
+                    <StyledLink to='/'><img src='../images/PP-LOGO-white.svg'></img></StyledLink>
                     <StyledLink to='/Gallery'><H3 text='GALLERY' fontSize='20px' color='#F7F7F7'/></StyledLink>
                     <StyledLink to='/Contact'><H3 text='CONTACT' fontSize='20px' color='#F7F7F7'/></StyledLink>
                     <StyledLink to='/Shop'><H3 text='SHOP' fontSize='20px' color='#F7F7F7'/></StyledLink>
                 </DivStyled>
                 <CartStyled>
-                    <StyledLink to='/Cart'><H3 text='CART' fontSize='20px' color='#F7F7F7'/></StyledLink>
+                    <H3 text='CART' fontSize='20px' color='#F7F7F7'/>
                 </CartStyled>
             </MenuStyled>
             <GalleryCard />
             <Footer />
         </ColorDiv>
-
     );
 }
 

@@ -16,7 +16,7 @@ const H1Styled = styled.h1`
     padding-bottom: ${props => props.paddingBottom || '0px'};
     padding-left: ${props => props.paddingLeft || '0px'};
     padding-right: ${props => props.paddingRight || '0px'};
-`
+`;
 
 const H2Styled = styled.h2`
     font-size: ${props => props.fontSize || '24px'};
@@ -32,7 +32,7 @@ const H2Styled = styled.h2`
     padding-bottom: ${props => props.paddingBottom || '0px'};
     padding-left: ${props => props.paddingLeft || '0px'};
     padding-right: ${props => props.paddingRight || '0px'};
-`
+`;
 
 const H3Styled = styled.h3`
     font-size: ${props => props.fontSize || '18px'};
@@ -49,7 +49,7 @@ const H3Styled = styled.h3`
     padding-left: ${props => props.paddingLeft || '0px'};
     padding-right: ${props => props.paddingRight || '0px'};
     z-index: ${props => props.zIndex || '0'};
-`
+`;
 
 const PStyled = styled.p`
     font-size: ${props => props.fontSize || '16px'};
@@ -65,7 +65,7 @@ const PStyled = styled.p`
     padding-bottom: ${props => props.paddingBottom || '0px'};
     padding-left: ${props => props.paddingLeft || '0px'};
     padding-right: ${props => props.paddingRight || '0px'};
-`
+`;
 
 export const H1 = (props) => {
     return <H1Styled {...props}>{props.text}</H1Styled>

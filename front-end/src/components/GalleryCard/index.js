@@ -3,22 +3,26 @@ import EmblaCarouselReact from 'embla-carousel-react'
 import styled from 'styled-components';
 
 const CarouselStyled = styled.div`
-    height: 100vh;
-    width: 80vw;
+    min-height: 100vh;
+    width: 90vw;
     display: flex;
     align-items: center;
+
 `;
 
 const ButtonStyled = styled.img`
     width: 2.1vw;
+    margin-top: 12.7vh;
 `;
 
 const ImgDiv = styled.div`
-    width: 41.6vw;
+    margin-top: 12.7vh;
+    margin-bottom: 6.7vh;
+    width: 48.8vw;
 `;
 
 const ImgStyled = styled.img`
-    width: 41.6vw;
+    width: 48.8vw;
 `;
 
 
@@ -26,9 +30,9 @@ const GalleryCard = () => {
     const [embla, setEmbla] = useState(null) 
     useEffect(() => {
         if (embla) {
-        embla.on('select', () => {
-            console.log(`Current index is ${embla.selectedScrollSnap()}`)
-        })
+            embla.on('select', () => {
+                console.log(`Current index is ${embla.selectedScrollSnap()}`)
+            })
         }
     }, [embla])
     
