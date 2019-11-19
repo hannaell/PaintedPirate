@@ -1,8 +1,0 @@
-2019-10-18T13:16:05+00:00 CRITICAL Cannot redeclare sections_endpoint() (previously declared in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php:76) in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php on line 105
-
-2019-10-18T13:18:07+00:00 CRITICAL Cannot redeclare sections_endpoint() (previously declared in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php:76) in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php on line 105
-
-2019-10-18T13:20:17+00:00 CRITICAL Cannot redeclare sections_endpoint() (previously declared in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php:76) in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php on line 105
-
-2019-10-18T13:22:24+00:00 CRITICAL Cannot redeclare sections_endpoint() (previously declared in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php:76) in /Users/hannaell/Documents/GitHub/PaintedPirate/wordpress/wp-content/themes/storefront/functions.php on line 105
-

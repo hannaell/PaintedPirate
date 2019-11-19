@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { H1, H2, H3 } from '../typo';
 import Layout from '../Layout';
@@ -18,7 +18,7 @@ const ImgDivStyled = styled.div`
 `;
 
 const RightDivStyled = styled.div`
-    height: 73vh;
+    min-height: 73vh;
     width: 17.3vw;
     margin-top: 13.2vh;
     margin-left: 1.2vw;
@@ -126,6 +126,18 @@ const BottomDivStyled = styled.div`
 `;
 
 const ProductCardClicked = (props) => {
+    const [toggleDescription, setToggleDescription] = useState(false);
+    const [toggleMaterial, setToggleMaterial] = useState(false);
+
+    // const toggleDescription = () => {
+    //     if (toggle === false) {
+    //         setToggle(true);
+
+    //     } else if (toggle === true) {
+    //         setToggle(false);
+    //     }
+    // };
+
     return(
         <Layout>
             <DivStyled>
@@ -150,11 +162,17 @@ const ProductCardClicked = (props) => {
                         <WhiteButtonStyled><H3 text='Select Size' fontSize='20px' textTransform='uppercase'/></WhiteButtonStyled>
                         <BlackButtonStyled><H3 text='Add To Bag' color='#F7F7F7' fontSize='20px' textTransform='uppercase'/></BlackButtonStyled>
                     </ButtonDivStyled>
-                    <H3 text='Material' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh'/>
-                    <H3 text='Details' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh'/>
-                    <DescriptionDiv>
+                    <H3 text='Material' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh' onClick={() => {setToggleMaterial(!toggleMaterial)}}/>
+                    {toggleMaterial && <DescriptionDiv>
+                        {props.productMaterial}
+                    </DescriptionDiv>}
+                    <H3 text='Details' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh' onClick={() => {setToggleDescription(!toggleDescription)}}/>
+                    {toggleDescription && <DescriptionDiv>
                         {props.productDescription}
-                    </DescriptionDiv>
+                    </DescriptionDiv>}
+                    {/* <DescriptionDiv>
+                        {props.productDescription}
+                    </DescriptionDiv> */}
                     <H3 text='Shipping' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh'/>
                 </RightDivStyled>
             </DivStyled>
