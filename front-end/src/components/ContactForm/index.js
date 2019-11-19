@@ -7,6 +7,8 @@ const FormStyled = styled.form`
     width: 74vw;
     padding-left: 13vw;
     padding-top: 6.5vh;
+    display: flex;
+    flex-direction: column;
 `;
 
 const InputStyled = styled.div`
@@ -35,7 +37,7 @@ const TextAreaStyled = styled.textarea`
 
 const ButtonStyled = styled.button`
     height: 5.5vh;
-    width: 37vw;
+    width: 49.5vw;
     margin-top: 4.4vh;
     background-color: #1A1A1A;
 `;
