@@ -64,7 +64,7 @@ const Home = () => {
                     <StyledLink to='/Shop'><H3 text='SHOP' fontSize='20px' color='#F7F7F7'/></StyledLink>
                 </DivStyled>
                 <CartStyled>
-                    <StyledLink to='/Cart'><H3 text='CART' fontSize='20px' color='#F7F7F7'/></StyledLink>
+                    <H3 text='CART' fontSize='20px' color='#F7F7F7'/>
                 </CartStyled>
             </MenuStyled>
             <Panorama></Panorama>
