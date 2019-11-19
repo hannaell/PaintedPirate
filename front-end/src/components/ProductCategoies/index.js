@@ -5,7 +5,8 @@ import { P } from '../typo';
 
 const CategoriesStyled = styled.div`
     width: 17.4vw;
-    margin-top: 45vh;
+    margin-top: 43vh;
+    margin-left: 5.9vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -14,6 +15,9 @@ const CategoriesStyled = styled.div`
 
 const UlStyled = styled.ul`
     list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2.7vh;
 `;
 
 const ListStyled = styled.li`
