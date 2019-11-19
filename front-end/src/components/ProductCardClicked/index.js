@@ -1,34 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
-import { H1, H2, H3, P } from '../typo';
+import { H1, H2, H3 } from '../typo';
 import Layout from '../Layout';
 import ProductCategories from '../ProductCategoies';
-import { log } from 'util';
 
 const DivStyled = styled.div`
     height: 86.6vh;
     width: 100vw;
     display: flex;
-    justify-content: space-evenly;
 `;
 
 const ImgDivStyled = styled.div`
     height: 73.4vh;
     width: 48.8vw;
     margin-top: 13.2vh;
+    margin-left: 2.2vw;
 `;
-
-// const ImgStyled = styled.img`
-//     width: 48.8vw;
-// `;
 
 const RightDivStyled = styled.div`
     height: 73vh;
-    width: 17.4vw;
+    width: 17.3vw;
     margin-top: 13.2vh;
+    margin-left: 1.2vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
 `;
 
 const PriceStyled = styled.div`
@@ -100,8 +97,13 @@ const BlackButtonStyled = styled.button`
     border: 2px solid #060606;    
 `;
 
+const DescriptionDiv = styled.div`
+    width: 10.1vw;
+    text-align: left;
+    margin-top: 1.9vh;
+    margin-left: 2vw;
+`;
 const MoreDivStyled = styled.div`
-    /* height: 18vh; */
     width: 48.8vw;
     margin-top: 0.5vh;
     display: flex; 
@@ -118,7 +120,6 @@ const BottomDivStyled = styled.div`
     margin-top: 15vh;
     margin-bottom: 8vh;
     margin-left: 25.6vw;
-    /* background-color: aqua; */
     display: flex; 
     flex-direction: column;
     align-items: flex-start;
@@ -135,7 +136,7 @@ const ProductCardClicked = (props) => {
                 <RightDivStyled>
                     <H1 text={props.productName} textTransform='uppercase' fontStyle='italic' fontWeight='900'/>
                     <PriceStyled>
-                        <H2 text={props.productPrice} fontWeight='900'/>
+                        <H2 text={props.productPrice} fontWeight='900' marginRight='5px'/>
                         <H2 text='SEK' fontWeight='900'/>
                     </PriceStyled>
                     <ColorStyled>
@@ -151,8 +152,9 @@ const ProductCardClicked = (props) => {
                     </ButtonDivStyled>
                     <H3 text='Material' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh'/>
                     <H3 text='Details' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh'/>
-                    {/* <P text={props.productDescription} /> */}
-                    {props.productDescription}
+                    <DescriptionDiv>
+                        {props.productDescription}
+                    </DescriptionDiv>
                     <H3 text='Shipping' fontSize='20px' fontWeight='500' textTransform='uppercase' marginTop='2.3vh'/>
                 </RightDivStyled>
             </DivStyled>
