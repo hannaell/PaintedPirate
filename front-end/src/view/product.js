@@ -32,7 +32,7 @@ const Product = (props) => {
             });
     }, []);
 
-    // console.log('productInfo', productInfo);
+    console.log('productInfo', productInfo);
     // console.log('productInfo Image', productInfo.images);
 
     return(
@@ -45,6 +45,11 @@ const Product = (props) => {
                 /> : null)}                    
                 productName = {productInfo.name}
                 productPrice = {productInfo.price}
+                productMaterial = {
+                    (productInfo.short_description && productInfo.short_description.length > 0 ? <P text = {
+                        productInfo.short_description.replace('<p>', '').replace('</p>', '')
+                    }
+                /> : null)}
                 productDescription = {
                     (productInfo.description && productInfo.description.length > 0 ? <P text = {
                         productInfo.description.replace('<p>', '').replace('</p>', '')

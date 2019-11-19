@@ -17,6 +17,7 @@ const UlStyled = styled.ul`
     margin: 0;
     padding: 0;
     margin-bottom: 2.7vh;
+    /* cursor: pointer; */
 `;
 
 const ListStyled = styled.li`

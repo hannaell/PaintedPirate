@@ -42,6 +42,7 @@ const UlStyled = styled.ul`
     margin: 0;
     padding: 0;
     margin-bottom: 2.7vh;
+    cursor: pointer;
 `;
 
 const ListStyled = styled.li`
@@ -139,7 +140,7 @@ const Shop = () => {
                 </CategoriesStyled >
                 <ProductDiv>
                     <CategoryDiv>
-                        <H3 text={category} fontSize='20px' fontWeight='500' />
+                        <H3 text={category} fontSize='20px' fontWeight='500' textTransform='uppercase' />
                     </CategoryDiv>
                     <ProductList categoryId={categoryId} onClick={clickProduct}/>
                 </ProductDiv>
