@@ -49,7 +49,7 @@ const Menu = () => {
                 <StyledLink to='/Shop'><H3 text='SHOP' fontSize='20px' fontWeight='500' /></StyledLink>
             </DivStyled>
             <CartStyled>
-                <StyledLink to='/Cart'><H3 text='CART' fontSize='20px' fontWeight='500' /></StyledLink>
+                <H3 text='CART' fontSize='20px' fontWeight='500' />
             </CartStyled>
         </MenuStyled>
     );
