@@ -6,7 +6,6 @@ import Contact from './view/contact';
 import Shop from './view/shop';
 import Gallery from './view/gallery';
 import Cart from './view/cart';
-import Sitemap from './view/sitemap';
 import Returns from './view/returns';
 import Product from './view/product';
 
@@ -21,7 +20,6 @@ function App() {
             <Route path='/shop' component={Shop} />
             <Route path='/gallery' component={Gallery} />
             <Route path='/cart' component={Cart} />
-            <Route path='/sitemap' component={Sitemap} />
             <Route path='/returns' component={Returns} />
             <Route path='/product/:product' component={Product} />
         </Switch>        
